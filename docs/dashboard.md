@@ -2,6 +2,12 @@
 
 A documentação acadêmica descreve um relatório Power BI com navegação por menu e três áreas principais. As descrições abaixo são funcionais; números, nomes de clientes, produtos e capturas do dashboard real foram deliberadamente omitidos.
 
+## Prévia estática de portfólio
+
+![Prévia demonstrativa da dashboard criada com dados sintéticos](../assets/dashboard-preview-sintetica.png)
+
+A imagem é uma composição ilustrativa gerada a partir das abas sintéticas `Pedidos_PowerBI` e `Itens_PowerBI`. Ela não é uma captura do relatório original nem deve ser lida como resultado da loja real.
+
 ## Resumo
 
 Uma visão consolidada para acompanhar indicadores gerais e explorar o desempenho ao longo do tempo. O relatório cita métricas como produtos mais vendidos, faturamento mensal e recorrência de clientes, com filtros temporais e comerciais.

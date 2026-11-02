@@ -23,13 +23,18 @@ O projeto documenta o uso de Excel e Power Query na preparação e Power BI na c
 
 - [Planilha sintética para Power BI](data/Vendas_demo_sinteticas.xlsx) — contém uma aba bruta demonstrativa com inconsistências de formatação e duas tabelas padronizadas para carga/modelagem.
 - [Gerador reprodutível da planilha](scripts/gerar_planilha_sintetica.py) — gera os dados fictícios a partir de uma semente fixa, sem importar linhas da planilha real.
+- [Gerador da prévia visual](scripts/gerar_previa_dashboard.py) — cria uma imagem ilustrativa usando apenas os dados sintéticos.
 - [Metodologia do projeto](docs/metodologia.md) — descreve o processo de tratamento e preparação.
 - [Páginas do dashboard](docs/dashboard.md) — descreve as páginas e perguntas de negócio.
 - [Privacidade e publicação](docs/privacidade-e-publicacao.md) — explica os materiais originais omitidos.
 
-## Dashboard
+## Prévia da dashboard
 
-A dashboard original tem áreas de **Resumo**, **Mapa** e **Vendas**, descritas no relatório acadêmico. Este repositório não inclui cópias de tela ou métricas reais. Também não inclui um PBIX fictício: o arquivo recebido usa uma conexão a um conjunto de dados remoto e, neste ambiente Linux, não há Power BI Desktop para substituir o modelo, gerar um arquivo PBIX válido e testar o resultado. Há instruções e medidas de partida em [`powerbi/`](powerbi/README.md).
+![Prévia estática demonstrativa da dashboard Orion Analysis, produzida com dados sintéticos](assets/dashboard-preview-sintetica.png)
+
+Esta é uma **prévia estática de portfólio**, gerada exclusivamente com as tabelas sintéticas deste repositório. Não é uma captura do PBIX original, não reproduz fielmente o layout original e seus valores fictícios não representam os resultados da loja. As áreas **Resumo**, **Mapa** e **Vendas** são descritas em [documentação própria](docs/dashboard.md).
+
+O repositório não inclui um PBIX fictício: o arquivo recebido usa uma conexão a um conjunto de dados remoto e, neste ambiente Linux, não há Power BI Desktop para substituir o modelo e testar um relatório. Há instruções e medidas DAX de partida em [`powerbi/`](powerbi/README.md).
 
 ## Tecnologias e competências demonstradas
 
