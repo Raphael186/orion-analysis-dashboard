@@ -1,0 +1,19 @@
+# Arquivos originais e fontes potencialmente sensíveis
+*.xlsx
+*.xls
+*.csv
+*.pbix
+*.pbit
+*.docx
+*.doc
+*.pdf
+*.xlsm
+
+# Dados e artefatos locais
+.env
+.env.*
+!.env.example
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

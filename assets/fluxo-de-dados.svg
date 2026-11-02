@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo conceitual da Orion Analysis</title>
+  <desc id="desc">Planilha de origem passa por preparação e transformação no Power Query, segue para análise visual no Power BI e é explorada em três áreas: Resumo, Mapa e Vendas. Diagrama conceitual sem dados reais.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#101827"/><stop offset="1" stop-color="#192b43"/></linearGradient>
+    <linearGradient id="accent" x1="0" x2="1"><stop offset="0" stop-color="#f4bd4f"/><stop offset="1" stop-color="#ef8254"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#9bb0c9"/></marker>
+    <style>
+      text{font-family:Inter,Arial,sans-serif}.title{font-size:26px;font-weight:700;fill:#fff}.sub{font-size:14px;fill:#a8bad0}.card{fill:#20344e;stroke:#38516e;stroke-width:1.5}.head{font-size:18px;font-weight:700;fill:#fff}.body{font-size:13px;fill:#c8d5e4}.step{font-size:11px;font-weight:700;letter-spacing:1.2px;fill:#f3bd52}.line{stroke:#9bb0c9;stroke-width:2;fill:none;marker-end:url(#arrow)}.tag{fill:#2b4360;stroke:#47617f;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="1200" height="360" rx="22" fill="url(#bg)"/>
+  <circle cx="1120" cy="40" r="110" fill="#f4bd4f" opacity=".06"/><circle cx="30" cy="350" r="140" fill="#ef8254" opacity=".05"/>
+  <text x="52" y="54" class="title">ORION ANALYSIS  <tspan fill="#f4bd4f">/</tspan> PIPELINE DE ANÁLISE</text>
+  <text x="52" y="80" class="sub">Visão esquemática da transformação de dados operacionais em informação visual</text>
+
+  <rect x="52" y="127" width="220" height="142" rx="15" class="card"/>
+  <text x="74" y="157" class="step">01 · ORIGEM</text><text x="74" y="190" class="head">Planilha de vendas</text>
+  <text x="74" y="216" class="body">Pedidos · itens · datas</text><text x="74" y="238" class="body">Fonte operacional</text>
+  <path d="M278 198 H328" class="line"/>
+
+  <rect x="338" y="127" width="220" height="142" rx="15" class="card"/>
+  <text x="360" y="157" class="step">02 · PREPARAÇÃO</text><text x="360" y="190" class="head">Power Query</text>
+  <text x="360" y="216" class="body">Revisão · padronização</text><text x="360" y="238" class="body">Transformação · ETL</text>
+  <path d="M564 198 H614" class="line"/>
+
+  <rect x="624" y="127" width="220" height="142" rx="15" class="card"/>
+  <text x="646" y="157" class="step">03 · ANÁLISE</text><text x="646" y="190" class="head">Power BI</text>
+  <text x="646" y="216" class="body">Modelo · métricas</text><text x="646" y="238" class="body">Filtros · navegação</text>
+  <path d="M850 198 H900" class="line"/>
+
+  <rect x="910" y="127" width="238" height="142" rx="15" fill="#263c55" stroke="url(#accent)" stroke-width="2"/>
+  <text x="932" y="157" class="step">04 · EXPLORAÇÃO</text><text x="932" y="190" class="head">Dashboard</text>
+  <rect x="932" y="210" width="58" height="26" rx="8" class="tag"/><text x="946" y="228" class="body">Resumo</text>
+  <rect x="998" y="210" width="54" height="26" rx="8" class="tag"/><text x="1011" y="228" class="body">Mapa</text>
+  <rect x="1060" y="210" width="66" height="26" rx="8" class="tag"/><text x="1070" y="228" class="body">Vendas</text>
+  <text x="52" y="320" class="sub">Diagrama conceitual · não contém registros, valores ou métricas da loja</text>
+</svg>
