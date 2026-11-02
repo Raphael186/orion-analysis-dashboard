@@ -1,69 +1,46 @@
 # Orion Analysis — Análise de Vendas e Dashboard
 
-> Projeto acadêmico de análise de dados: transformar planilhas operacionais em uma experiência de acompanhamento de vendas no Power BI.
+> Projeto acadêmico de análise de dados: transformar uma exportação de vendas despadronizada em tabelas consistentes e, depois, em uma dashboard interativa no Power BI.
 
 ![Diagrama conceitual do fluxo de dados da Orion Analysis](assets/fluxo-de-dados.svg)
 
 ## Visão geral
 
-A Orion Analysis é uma empresa fictícia criada por um grupo de estudantes para apresentar uma solução de Business Intelligence a uma loja varejista de acessórios. O trabalho partiu de planilhas de vendas e descreveu um fluxo de preparação no Excel/Power Query, seguido da criação de páginas interativas no Power BI.
+A Orion Analysis é uma empresa fictícia criada por um grupo de estudantes para apresentar uma solução de Business Intelligence a uma loja varejista real. Segundo a equipe, a fonte recebida estava desorganizada e com formatos inconsistentes. O grupo tratou os dados para estabelecer um padrão único e, só depois dessa preparação, carregou a versão tratada no Power BI para construir as dashboards.
 
-O objetivo do painel é tornar perguntas de negócio mais acessíveis: como as vendas evoluem ao longo do tempo, quais produtos têm maior participação e como os resultados se distribuem por região e canal. O projeto é uma entrega acadêmica e uma demonstração de portfólio — não um sistema de produção nem uma auditoria dos resultados da loja.
+O objetivo do painel era tornar perguntas de negócio mais acessíveis: como as vendas evoluem ao longo do tempo, quais produtos se destacam e como os resultados se distribuem por região e canal. É uma entrega acadêmica e uma demonstração de portfólio — não um sistema de produção nem uma auditoria dos resultados da loja.
 
-## O que foi desenvolvido
+## Processo realizado
 
-- Levantamento de necessidades para uma análise de vendas.
-- Exploração e preparação dos dados no Excel e Power Query, conforme documentado no trabalho.
-- Dashboard navegável no Power BI, com áreas de **Resumo**, **Mapa** e **Vendas**.
-- Filtros descritos no projeto para período e dimensões comerciais, como estado, plataforma/canal e forma de entrega.
-- Identidade conceitual e narrativa de serviço sob a marca fictícia Orion Analysis.
+1. **Receber e inspecionar** a planilha de origem, identificando campos, formatos divergentes, lacunas e informações que não eram necessárias ao painel.
+2. **Tratar e padronizar** a estrutura para seguir um padrão único: normalizar cabeçalhos e valores, harmonizar tipos/formato de datas e números, organizar categorias e tratar campos vazios ou irrelevantes.
+3. **Carregar os dados tratados** no Power BI, preservando uma fonte coerente para modelagem e visualização.
+4. **Construir e organizar** as páginas interativas **Resumo**, **Mapa** e **Vendas**, com filtros temporais e comerciais descritos no trabalho.
 
-Veja a descrição das telas em [docs/dashboard.md](docs/dashboard.md) e o processo em [docs/metodologia.md](docs/metodologia.md).
+O projeto documenta o uso de Excel e Power Query na preparação e Power BI na criação da dashboard. A planilha de demonstração neste repositório materializa a ideia de “origem despadronizada → dados tratados → carga no Power BI”, mas seus registros são todos inventados.
 
-## Fluxo conceitual
+## Arquivos de demonstração
 
-1. **Fonte:** exportação de pedidos e itens em planilha.
-2. **Preparação:** revisão, padronização, filtragem e transformação no Power Query.
-3. **Análise:** definição de dimensões e indicadores de vendas.
-4. **Apresentação:** páginas interativas no Power BI para explorar os resultados.
+- [Planilha sintética para Power BI](data/Vendas_demo_sinteticas.xlsx) — contém uma aba bruta demonstrativa com inconsistências de formatação e duas tabelas padronizadas para carga/modelagem.
+- [Gerador reprodutível da planilha](scripts/gerar_planilha_sintetica.py) — gera os dados fictícios a partir de uma semente fixa, sem importar linhas da planilha real.
+- [Metodologia do projeto](docs/metodologia.md) — descreve o processo de tratamento e preparação.
+- [Páginas do dashboard](docs/dashboard.md) — descreve as páginas e perguntas de negócio.
+- [Privacidade e publicação](docs/privacidade-e-publicacao.md) — explica os materiais originais omitidos.
 
-O diagrama é esquemático; não contém dados, números ou capturas da loja.
+## Dashboard
 
-## Estrutura do repositório
-
-```text
-.
-├── assets/
-│   └── fluxo-de-dados.svg
-├── data/
-│   └── README.md
-├── docs/
-│   ├── dashboard.md
-│   ├── metodologia.md
-│   ├── privacidade-e-publicacao.md
-│   └── reproducibilidade.md
-├── powerbi/
-│   └── README.md
-├── site/
-│   └── README.md
-├── .gitignore
-└── README.md
-```
+A dashboard original tem áreas de **Resumo**, **Mapa** e **Vendas**, descritas no relatório acadêmico. Este repositório não inclui cópias de tela ou métricas reais. Também não inclui um PBIX fictício: o arquivo recebido usa uma conexão a um conjunto de dados remoto e, neste ambiente Linux, não há Power BI Desktop para substituir o modelo, gerar um arquivo PBIX válido e testar o resultado. Há instruções e medidas de partida em [`powerbi/`](powerbi/README.md).
 
 ## Tecnologias e competências demonstradas
 
-**Microsoft Excel · Power Query · Power BI · preparação de dados · análise exploratória · visualização interativa · levantamento de requisitos · comunicação de resultados · privacidade por concepção**
+**Microsoft Excel · Power Query · Power BI · ETL · padronização de dados · modelagem analítica · visualização interativa · levantamento de requisitos · comunicação de resultados · privacidade por concepção**
 
-## Limites desta publicação
+## Limites e privacidade
 
-Os arquivos originais recebidos incluem nomes de compradores e destinatários, localidades, anotações livres, identificadores de pedidos, itens/preços, documentos com nomes de integrantes/orientador e páginas de dashboard com métricas comerciais. Por isso, **a planilha bruta, o PBIX original, o relatório acadêmico integral e o banner original não foram incluídos neste repositório público**. O site foi mencionado na documentação, mas seus arquivos-fonte não foram enviados.
+Os materiais originais recebidos contêm dados de compradores e destinatários, localidades, anotações, identificadores de pedidos, valores e itens comerciais. O PBIX pode incorporar dados e métricas; o relatório Word e o banner identificam estudantes/orientador e exibem visuais da loja. Portanto, os originais não foram colocados no repositório público.
 
-Em vez de publicar material identificável, este repositório apresenta o escopo, a metodologia e a estrutura da solução sem reproduzir registros ou indicadores reais. Consulte [docs/privacidade-e-publicacao.md](docs/privacidade-e-publicacao.md) antes de acrescentar qualquer material original.
-
-## Como visualizar
-
-Este repositório contém documentação e um diagrama conceitual; ele não contém um PBIX sanitizado nem dados de demonstração, então não é possível reproduzir ou atualizar o dashboard a partir do GitHub. O arquivo PBIX original continua sendo necessário para abrir o relatório completo no Power BI Desktop, mas deve ser revisado e sanitizado antes de qualquer compartilhamento.
+O XLSX publicado é uma **demonstração sintética**, gerada do zero. Nomes, IDs, valores, pedidos, produtos, datas e locais nos exemplos não são registros nem resultados da loja. O site da Orion Analysis foi mencionado no relatório, mas os arquivos-fonte não foram enviados.
 
 ## Contexto
 
-Trabalho acadêmico da marca fictícia Orion Analysis, desenvolvido em 2023 por um grupo de estudantes de Técnico em Informática. O conteúdo deste repositório foi preparado como apresentação pública do projeto com foco em portfólio e minimização de dados.
+Trabalho acadêmico de 2023 da marca fictícia Orion Analysis, desenvolvido por um grupo de estudantes de Técnico em Informática. Este repositório foi preparado como apresentação pública de portfólio, com atenção à privacidade dos dados de origem.

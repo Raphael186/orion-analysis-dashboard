@@ -1,5 +1,6 @@
 # Arquivos originais e fontes potencialmente sensíveis
 *.xlsx
+!data/Vendas_demo_sinteticas.xlsx
 *.xls
 *.csv
 *.pbix

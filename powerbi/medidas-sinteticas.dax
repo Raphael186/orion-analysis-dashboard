@@ -1,0 +1,14 @@
+-- Medidas demonstrativas para o workbook sintético.
+-- Não são medidas de resultados reais da loja.
+
+Pedidos Demo =
+DISTINCTCOUNT ( Pedidos_PowerBI[pedido_id_demo] )
+
+Itens Vendidos Demo =
+SUM ( Itens_PowerBI[quantidade] )
+
+Valor dos Itens Demo =
+SUM ( Itens_PowerBI[valor_linha] )
+
+Total dos Pedidos Demo =
+SUM ( Pedidos_PowerBI[total_pedido] )

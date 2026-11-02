@@ -2,16 +2,18 @@
 
 ## Materiais recebidos
 
-Foram analisados uma planilha XLSX, um relatório Power BI (`.pbix`), um relatório acadêmico Word e um banner PDF. Os arquivos-fonte do site não foram enviados.
+Foram analisados uma planilha XLSX, um arquivo Power BI (`.pbix`), um relatório acadêmico Word e um banner PDF. Os arquivos-fonte do site não foram enviados.
 
-## Materiais publicados aqui
+## Demonstração pública
 
-Este repositório inclui uma síntese em texto do escopo e da metodologia, documentação das áreas do dashboard, uma visão agregada das categorias de dados e um diagrama conceitual sem métricas reais ou registros pessoais.
+O arquivo [`../data/Vendas_demo_sinteticas.xlsx`](../data/Vendas_demo_sinteticas.xlsx) traz uma aba bruta de exemplo e duas tabelas padronizadas, todas com dados sintéticos. O script [`../scripts/gerar_planilha_sintetica.py`](../scripts/gerar_planilha_sintetica.py) recria o workbook com a mesma semente. Ele não abre nem consulta os arquivos reais.
 
-## Materiais não publicados
+A aba `Pedidos_PowerBI` tem uma linha por pedido; `Itens_PowerBI` tem uma linha por item. No Power BI, relacione as tabelas por `pedido_id_demo` e escolha a granularidade apropriada para cada medida.
 
-Os binários originais não foram copiados: a planilha contém identificadores e dados pessoais/comerciais; o PBIX pode carregar os dados e visuais de origem; o Word e o banner identificam integrantes/orientador e exibem conteúdo derivado da loja. A publicação desses materiais exige anonimização, revisão do arquivo final e autorização apropriada.
+## Por que não há um PBIX sintético pronto
 
-## Como reproduzir futuramente
+O PBIX recebido aponta para um conjunto de dados remoto do Power BI. Substituí-lo por uma fonte Excel sintética exige reconstruir o modelo e salvar/testar o relatório no Power BI Desktop, que não está disponível neste ambiente Linux. Para não entregar um arquivo corrompido ou com dados reais, o PBIX original foi mantido fora do repositório. O diretório [`../powerbi/`](../powerbi/README.md) contém a configuração de modelo e as medidas iniciais para reconstrução local.
 
-Com uma fonte autorizada e anonimizada, a equipe pode reconstruir o fluxo: importar os dados no Power Query, documentar as transformações, modelar as medidas, implementar as páginas e filtros no Power BI e validar os resultados com a fonte. Essa etapa não é reproduzível com os arquivos públicos atuais, pois nenhum conjunto de dados nem arquivo PBIX sanitizado está incluído.
+## Processo documentado
+
+O processo relatado pela equipe foi: receber uma planilha despadronizada, tratar e padronizar os dados para que seguissem um único padrão, e só então carregar a planilha tratada no Power BI para criar as dashboards. O workbook sintético demonstra essa sequência, mas não replica transformações exatas ou valores da fonte real.
